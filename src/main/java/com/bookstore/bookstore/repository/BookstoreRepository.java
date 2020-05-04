@@ -13,7 +13,7 @@ public interface BookstoreRepository extends JpaRepository<Book, Long> {
 
     List<Book> findByAuthor(String author);
 
-    List<Book> findByGanre(String ganre);
+    List<Book> findByGenre(String genre);
 
     List<Book> findByPrice(double price);
 
