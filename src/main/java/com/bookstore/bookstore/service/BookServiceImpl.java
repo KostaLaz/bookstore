@@ -1,6 +1,7 @@
 package com.bookstore.bookstore.service;
 
 import com.bookstore.bookstore.domain.Book;
+import com.bookstore.bookstore.repository.BookRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -8,6 +9,14 @@ import java.util.Set;
 
 @Service
 public class BookServiceImpl implements BookService {
+
+    private BookRepository bookRepository;
+
+    public BookServiceImpl(BookRepository bookRepository) {
+        this.bookRepository = bookRepository;
+    }
+
+
     @Override
     public Set<Book> getAllBooks() {
         return null;
@@ -26,5 +35,10 @@ public class BookServiceImpl implements BookService {
     @Override
     public List<Book> getBooksByGenre(String genre) {
         return null;
+    }
+
+    @Override
+    public void addBook(Book book) {
+
     }
 }

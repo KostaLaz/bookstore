@@ -15,4 +15,6 @@ public interface BookService {
 
     List<Book> getBooksByGenre(String genre);
 
+    void addBook(Book book);
+
 }
