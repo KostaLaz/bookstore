@@ -1,20 +1,8 @@
 package com.bookstore.bookstore.repository;
 
 import com.bookstore.bookstore.domain.Book;
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.mongodb.repository.MongoRepository;
 
-import java.util.List;
-
-public interface BookRepository extends JpaRepository<Book, Long> {
-
-    List<Book> findAll();
-
-    List<Book> findByTitle(String title);
-
-    List<Book> findByAuthor(String author);
-
-    List<Book> findByGenre(String genre);
-
-    List<Book> findByPrice(double price);
+public interface BookRepository extends MongoRepository<Book, Long> {
 
 }
