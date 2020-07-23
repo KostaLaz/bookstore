@@ -11,9 +11,9 @@ public class Client {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String username;
+    private String name;
 
-    private String password;
+    private String lastName;
 
     private Collection<Book> cart;
 

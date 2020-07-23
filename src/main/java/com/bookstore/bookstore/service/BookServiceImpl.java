@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Set;
 
 @Service
-public class BookstoreServiceImpl implements BookstoreService{
+public class BookServiceImpl implements BookService {
     @Override
     public Set<Book> getAllBooks() {
         return null;

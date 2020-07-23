@@ -5,7 +5,7 @@ import com.bookstore.bookstore.domain.Book;
 import java.util.List;
 import java.util.Set;
 
-public interface BookstoreService {
+public interface BookService {
 
     Set<Book> getAllBooks();
 

@@ -23,6 +23,8 @@ public class Book {
 
     private String genre;
 
+    private int numOfPages;
+
     private double price;
 
 
