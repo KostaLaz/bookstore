@@ -9,9 +9,11 @@ public interface BookService {
 
     Set<Book> getAllBooks();
 
-    List<Book> getBooksByAuthor(String author);
+    Set<Book> getBooksByAuthor(String author);
 
     List<Book> getBooksByTitle(String title);
+
+    Set<Book> getBookByTitleAndAuthor(String title, String author);
 
     List<Book> getBooksByGenre(String genre);
 

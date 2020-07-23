@@ -19,26 +19,32 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public Set<Book> getAllBooks() {
-        return null;
+        return (Set<Book>) bookRepository.findAll();
     }
 
     @Override
-    public List<Book> getBooksByAuthor(String author) {
-        return null;
+    public Set<Book> getBooksByAuthor(String author) {
+        return bookRepository.findByAuthor(author);
     }
 
     @Override
     public List<Book> getBooksByTitle(String title) {
-        return null;
+        return bookRepository.findByTitle(title);
     }
 
     @Override
+    public Set<Book> getBookByTitleAndAuthor(String title, String author) {
+        return bookRepository.findByTitleAndAuthor(title, author);
+    }
+
+
+    @Override
     public List<Book> getBooksByGenre(String genre) {
-        return null;
+        return bookRepository.findByGenre(genre);
     }
 
     @Override
     public void addBook(Book book) {
-
+        bookRepository.save(book);
     }
 }
