@@ -2,11 +2,9 @@ package com.bookstore.bookstore.controllers;
 
 import com.bookstore.bookstore.domain.Book;
 import com.bookstore.bookstore.service.BookService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Set;
 
 @RestController
@@ -21,15 +19,34 @@ public class BookController {
 
 
     @GetMapping("/allbooks")
-    public Set<Book> getAllBooks(){
-       return bookService.getAllBooks();
+    public Set<Book> getAllBooks() {
+        return bookService.getAllBooks();
     }
 
     @GetMapping("/byauthor")
-    public Set<Book> getBooksByAuthor(@PathVariable String author){
+    public Set<Book> getBooksByAuthor(@PathVariable String author) {
         return bookService.getBooksByAuthor(author);
     }
 
+    @GetMapping("/bytitle")
+    public List<Book> getBookByTitle(@PathVariable String title) {
+        return bookService.getBooksByTitle(title);
+    }
+
+    @GetMapping("/titleandauthor")
+    public Set<Book> getBooksByTitleAndAuthor(@PathVariable String title, @PathVariable String author) {
+        return bookService.getBookByTitleAndAuthor(title, author);
+    }
+
+    @GetMapping("/bygenre")
+    public List<Book> getBooksByGenre(@PathVariable String genre) {
+        return bookService.getBooksByGenre(genre);
+    }
+
+    @PostMapping("/addbook")
+    public void addBook(Book book){
+        bookService.addBook(book);
+    }
 
 
 }
