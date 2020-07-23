@@ -23,12 +23,12 @@ public class BookController {
         return bookService.getAllBooks();
     }
 
-    @GetMapping("/byauthor")
+    @GetMapping("/byauthor/{author}")
     public Set<Book> getBooksByAuthor(@PathVariable String author) {
         return bookService.getBooksByAuthor(author);
     }
 
-    @GetMapping("/bytitle")
+    @GetMapping("/bytitle/{title}")
     public List<Book> getBookByTitle(@PathVariable String title) {
         return bookService.getBooksByTitle(title);
     }
@@ -38,7 +38,7 @@ public class BookController {
         return bookService.getBookByTitleAndAuthor(title, author);
     }
 
-    @GetMapping("/bygenre")
+    @GetMapping("/bygenre/{genre}")
     public List<Book> getBooksByGenre(@PathVariable String genre) {
         return bookService.getBooksByGenre(genre);
     }
