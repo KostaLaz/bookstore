@@ -15,7 +15,7 @@ import java.util.Collection;
 public class Client {
 
     @Id
-    private Long id;
+    private String id;
 
     private String name;
 

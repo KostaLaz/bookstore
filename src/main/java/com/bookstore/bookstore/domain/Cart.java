@@ -14,7 +14,7 @@ import java.util.List;
 @AllArgsConstructor
 public class Cart {
     @Id
-    private Long id;
+    private String id;
     private int numberOfProducts;
     private double totalPrice;
 
