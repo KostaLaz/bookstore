@@ -5,6 +5,7 @@ import com.bookstore.bookstore.repository.BookRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 
 @Service
@@ -21,6 +22,12 @@ public class BookServiceImpl implements BookService {
     public Set<Book> getAllBooks() {
         return (Set<Book>) bookRepository.findAll();
     }
+
+    @Override
+    public Optional<Book> getBookById(Integer id) {
+        return bookRepository.findById(id);
+    }
+
 
     @Override
     public Set<Book> getBooksByAuthor(String author) {

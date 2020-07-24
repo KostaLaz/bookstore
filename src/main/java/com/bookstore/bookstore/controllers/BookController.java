@@ -5,6 +5,7 @@ import com.bookstore.bookstore.service.BookService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 
 @RestController
@@ -21,6 +22,11 @@ public class BookController {
     @GetMapping("/allbooks")
     public Set<Book> getAllBooks() {
         return bookService.getAllBooks();
+    }
+
+    @GetMapping("/id/{id}")
+    public Optional<Book> getBookById(Integer id){
+        return bookService.getBookById(id);
     }
 
     @GetMapping("/byauthor/{author}")
