@@ -25,6 +25,4 @@ public class Book {
 
     private double price;
 
-    private BookType type;
-
 }
