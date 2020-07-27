@@ -9,5 +9,5 @@ public interface ClientService {
 
     List<Client> getClientsByNumberOfBooks(Integer numOfBooks);
 
-    List<Client> getClientByCadrNumber(Integer cardNumber);
+    List<Client> getClientById(String id);
 }

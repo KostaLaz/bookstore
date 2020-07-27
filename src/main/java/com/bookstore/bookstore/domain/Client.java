@@ -21,11 +21,6 @@ public class Client {
 
     private String lastName;
 
-    private int cardNumber;
-
     private Collection<Book> cart;
-
-
-
 
 }
