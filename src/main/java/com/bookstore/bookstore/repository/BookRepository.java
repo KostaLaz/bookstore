@@ -12,7 +12,7 @@ public interface BookRepository extends MongoRepository<Book, Integer> {
 
     Optional<Book> findById(Integer id);
 
-    Set<Book> findByAuthor(String author);
+    List<Book> findByAuthor(String author);
 
     List<Book> findByTitle(String title);
 

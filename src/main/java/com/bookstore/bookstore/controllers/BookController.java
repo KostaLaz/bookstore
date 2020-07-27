@@ -20,7 +20,7 @@ public class BookController {
 
 
     @GetMapping("/allbooks")
-    public Set<Book> getAllBooks() {
+    public List<Book> getAllBooks() {
         return bookService.getAllBooks();
     }
 
@@ -30,7 +30,7 @@ public class BookController {
     }
 
     @GetMapping("/byauthor/{author}")
-    public Set<Book> getBooksByAuthor(@PathVariable String author) {
+    public List<Book> getBooksByAuthor(@PathVariable String author) {
         return bookService.getBooksByAuthor(author);
     }
 

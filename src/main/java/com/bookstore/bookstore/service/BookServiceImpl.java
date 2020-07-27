@@ -19,8 +19,8 @@ public class BookServiceImpl implements BookService {
 
 
     @Override
-    public Set<Book> getAllBooks() {
-        return (Set<Book>) bookRepository.findAll();
+    public List<Book> getAllBooks() {
+        return  bookRepository.findAll();
     }
 
     @Override
@@ -30,7 +30,7 @@ public class BookServiceImpl implements BookService {
 
 
     @Override
-    public Set<Book> getBooksByAuthor(String author) {
+    public List<Book> getBooksByAuthor(String author) {
         return bookRepository.findByAuthor(author);
     }
 
