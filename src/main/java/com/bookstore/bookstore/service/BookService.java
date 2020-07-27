@@ -10,7 +10,7 @@ public interface BookService {
 
     List<Book> getAllBooks();
 
-    Optional<Book> getBookById(Integer id);
+    Optional<Book> getBookById(String id);
 
     List<Book> getBooksByAuthor(String author);
 
@@ -21,5 +21,9 @@ public interface BookService {
     List<Book> getBooksByGenre(String genre);
 
     void addBook(Book book);
+
+    void deleteBookById(String id);
+
+    void deleteBook(Book book);
 
 }

@@ -24,7 +24,7 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public Optional<Book> getBookById(Integer id) {
+    public Optional<Book> getBookById(String id) {
         return bookRepository.findById(id);
     }
 
@@ -54,4 +54,16 @@ public class BookServiceImpl implements BookService {
     public void addBook(Book book) {
         bookRepository.save(book);
     }
+
+    @Override
+    public void deleteBookById(String id) {
+        bookRepository.deleteById(id);
+    }
+
+    @Override
+    public void deleteBook(Book book) {
+        bookRepository.delete(book);
+    }
+
+
 }

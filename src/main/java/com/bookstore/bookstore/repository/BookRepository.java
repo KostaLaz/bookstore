@@ -10,7 +10,7 @@ import java.util.Set;
 @Repository
 public interface BookRepository extends MongoRepository<Book, Integer> {
 
-    Optional<Book> findById(Integer id);
+    Optional<Book> findById(String id);
 
     List<Book> findByAuthor(String author);
 
@@ -19,8 +19,6 @@ public interface BookRepository extends MongoRepository<Book, Integer> {
     Set<Book> findByTitleAndAuthor(String title, String author);
 
     List<Book> findByGenre(String ganre);
-
-    
 
     void deleteById(String id);
 

@@ -25,7 +25,7 @@ public class BookController {
     }
 
     @GetMapping("/id/{id}")
-    public Optional<Book> getBookById(Integer id){
+    public Optional<Book> getBookById(String id){
         return bookService.getBookById(id);
     }
 
@@ -54,5 +54,15 @@ public class BookController {
         bookService.addBook(book);
     }
 
+
+    @DeleteMapping("/deletebyid")
+    public void deleteById(@PathVariable String id){
+        bookService.deleteBookById(id);
+    }
+
+    @DeleteMapping("/deletebook")
+    public void deleteBook(@RequestBody Book book){
+        bookService.deleteBook(book);
+    }
 
 }
