@@ -22,7 +22,7 @@ public interface BookService {
 
     void addBook(Book book);
 
-    void deleteBookById(String id);
+    void deleteBookById(int id);
 
     void deleteBook(Book book);
 

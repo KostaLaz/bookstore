@@ -11,7 +11,7 @@ import java.util.Set;
 @Service
 public class BookServiceImpl implements BookService {
 
-    private BookRepository bookRepository;
+    private final BookRepository bookRepository;
 
     public BookServiceImpl(BookRepository bookRepository) {
         this.bookRepository = bookRepository;
@@ -56,8 +56,8 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public void deleteBookById(String id) {
-        bookRepository.deleteById(id);
+    public void deleteBookById(int id) {
+        bookRepository.deleteById(String.valueOf(id));
     }
 
     @Override

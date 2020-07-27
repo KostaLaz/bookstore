@@ -12,7 +12,7 @@ import java.util.Set;
 @RequestMapping("/books")
 public class BookController {
 
-    private BookService bookService;
+    private final BookService bookService;
 
     public BookController(BookService bookService) {
         this.bookService = bookService;
@@ -56,7 +56,7 @@ public class BookController {
 
 
     @DeleteMapping("/deletebyid/{id}")
-    public void deleteById(@PathVariable String id){
+    public void deleteById(@PathVariable int id){
         bookService.deleteBookById(id);
     }
 
