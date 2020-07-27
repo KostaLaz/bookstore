@@ -20,5 +20,8 @@ public interface BookRepository extends MongoRepository<Book, Integer> {
 
     List<Book> findByGenre(String ganre);
 
+    
+
+    void deleteById(String id);
 
 }
