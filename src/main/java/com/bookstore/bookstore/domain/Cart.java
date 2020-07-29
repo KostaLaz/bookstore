@@ -8,14 +8,17 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.List;
 
-@Data
 @Document(collection = "Cart")
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class Cart {
+
     @Id
     private String id;
+
     private int numberOfProducts;
+
     private double totalPrice;
 
     private Client client;
