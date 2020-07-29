@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 @Repository
-public interface BookRepository extends MongoRepository<Book, Integer> {
+public interface BookRepository extends MongoRepository<Book, String> {
 
     Optional<Book> findById(String id);
 

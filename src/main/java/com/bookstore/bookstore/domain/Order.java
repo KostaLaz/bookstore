@@ -16,7 +16,7 @@ import java.util.Map;
 public class Order {
 
     @Id
-    private Integer id;
+    private String id;
 
     private Map<Book, Integer> items;
 
