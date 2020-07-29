@@ -20,9 +20,7 @@ public interface BookService {
 
     List<Book> getBooksByGenre(String genre);
 
-    void addBook(Book book);
-
-    void updateBook(Book book);
+    void addOrUpdateBook(Book book);
 
     void deleteBookById(int id);
 
