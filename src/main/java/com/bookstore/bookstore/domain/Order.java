@@ -31,4 +31,9 @@ public class Order {
         this.totalPrice = totalPrice;
         this.orderBy = orderBy;
     }
+
+    public Order(Map<Book, Integer> items, Client orderBy) {
+        this.items = items;
+        this.orderBy = orderBy;
+    }
 }
