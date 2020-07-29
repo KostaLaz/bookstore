@@ -17,9 +17,15 @@ public class Client {
     @Id
     private String id;
 
-    private String name;
+    private String fullName;
+
+    private String username;
+
+    private String password;
 
     private String lastName;
+
+    private boolean isActive;
 
     private Collection<Book> cart;
 
