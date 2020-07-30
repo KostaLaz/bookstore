@@ -6,7 +6,7 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.util.Collection;
+import java.util.Set;
 
 @Document(collection = "Client")
 @Data
@@ -27,6 +27,6 @@ public class Client {
 
     private boolean isActive;
 
-    private Collection<Book> cart;
+    private Set<Book> cart;
 
 }
